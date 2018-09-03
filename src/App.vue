@@ -8,6 +8,14 @@
   </div>
 </template>
 
+<script>
+import Tablet from './models/tablet'
+
+export default {
+
+}
+</script>
+
 <style lang="scss">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
