@@ -9,6 +9,8 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "openseadragon": "^2.4.0",
+    "plyr": "^3.4.3",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1"
   },
