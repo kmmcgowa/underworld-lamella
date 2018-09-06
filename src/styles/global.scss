@@ -5,11 +5,14 @@
 }
 
 body {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   font-family: $font-serif;
+  font-size: 30px;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
   background-color: #3E4041;
   color: $color-grey;
 }
@@ -18,5 +21,15 @@ body {
 
 .sans-serif { font-family: $font-sans-serif; }
 .serif      { font-family: $font-serif; }
-.bold       { font-style: bold; }
+.bold       { font-weight: bold; }
 .italic     { font-style: italic; }
+
+.color-orange { color: $color-orange; }
+.color-grey   { color: $color-grey; }
+.color-purple { color: $color-purple; }
+
+// Display stuff
+
+.flex {
+  display: flex;
+}
