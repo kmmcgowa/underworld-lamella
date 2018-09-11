@@ -1,7 +1,7 @@
 <template>
   <div class="home-container flex">
     <header class="flex">
-      <h1 class="serif bold color-orange title">PASSPORTS TO THE UNDERWORLD</h1>
+      <h1 class="serif bold color-orange title">PASSPORTS TO A BETTER AFTERLIFE</h1>
     </header>
     <main class="flex tablet-container">
       <div class="tablet-box tablet-bm1">

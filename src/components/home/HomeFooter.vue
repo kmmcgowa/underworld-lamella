@@ -2,7 +2,7 @@
   <div class="home-footer-container flex color-orange">
     <div class="cta flex action">
       <img class="icon" src="../../assets/touch_explore.png">
-      <p class="description">Touch a tablet above to explore it, see the translation, and learn more.</p>
+      <p class="description">Touch the screen to explore a gold tablet up close, read the translated text, and learn more about these tablets.</p>
     </div>
     <div class="audio flex action">
       <img class="icon" src="../../assets/play_btn.svg">
@@ -54,6 +54,10 @@ export default {
 img {
   width: 90px;
   height: 90px;
+}
+
+.audio img {
+  transform: scale(.95);
 }
 
 .description {
