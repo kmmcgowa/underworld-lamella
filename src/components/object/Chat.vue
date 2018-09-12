@@ -1,4 +1,5 @@
 <template>
+  <p>{{ text }}</p>
 </template>
 
 <script>
@@ -6,13 +7,8 @@ export default {
 
   name: 'Chat',
 
-  data () {
-    return {
-
-    }
+  props: {
+    text: String
   }
 }
 </script>
-
-<style lang="css" scoped>
-</style>

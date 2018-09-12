@@ -1,10 +1,29 @@
 <template>
+  <div id="tombstone">
+    <Tombstone :tombstone="this.text.tombstone"></Tombstone>
+    <Chat :text="this.text.chat"></Chat>
+    <Credit :loaner="this.text.credit" number="this.credit.number"></Credit>
+  </div>
 </template>
 
 <script>
+import Tombstone from './Tombstone'
+import Chat from './Chat'
+import Credit from './Credit'
+
 export default {
 
   name: 'Label',
+
+  components: {
+    Tombstone,
+    Chat,
+    Credit
+  },
+
+  props: {
+    text: Object
+  },
 
   data () {
     return {
@@ -14,5 +33,5 @@ export default {
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
 </style>
