@@ -3,17 +3,8 @@
   "image": "bm1.png",
   "label": {
     "tombstone": {
-      "objects": [
-        {
-          "name": "Tablet with Instructions for the Deceased in the Underworld",
-          "date": "South Italian, 200–100 <span class='small-caps'>bc</span>"
-        },
-        {
-          "name": "Case on a Chain",
-          "date": "Roman, <span class='small-caps'>ad</span> 100–200"
-        }
-      ],
-      "location": "Reportedly found together in Petelia (present-day Strongoli, Italy)",
+      "name": "Tablet with Instructions for the Deceased in the Underworld and a Case on a Chain",
+      "dateLocation": "South Italian, 200–100 <span class='small-caps'>bc</span>; Roman, <span class='small-caps'>ad</span> 100–200; Reportedly found together in Petelia (present-day Strongoli, Italy)",
       "material": "Gold"
     },
     "chat": "The discovery of this inscribed gold tablet, the first of its kind to be found, was published in 1836. Its significance was fully realized only after similar tablets were uncovered elsewhere in southern Italy. The Greek inscription promises the deceased that she “will reign [with the other] heroes” in the Underworld. The tablet was cut down to fit into the Roman amulet case that hangs on a gold chain, suggesting reuse in antiquity—or an adjustment in the nineteenth century.",
