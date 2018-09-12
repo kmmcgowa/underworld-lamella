@@ -4,16 +4,14 @@
       <img class="icon" src="../../assets/touch_explore.png">
       <p class="description">Touch the screen to explore a gold tablet up close, read the translated text, and learn more about these tablets.</p>
     </div>
-    <div class="audio flex action">
-      <img class="icon" src="../../assets/play_btn.svg">
-      <p class="description">Hear an Orphic tablet inscription, recited in ancient Greek.</p>
-    </div>
+    <!--<div class="audio flex action">-->
+      <!--<img class="icon" src="../../assets/play_btn.svg">-->
+      <!--<p class="description">Hear an Orphic tablet inscription, recited in ancient Greek.</p>-->
+    <!--</div>-->
   </div>
 </template>
 
 <script>
-// import Plyr from 'plyr'
-
 export default {
 
   name: 'HomeFooter',
@@ -36,15 +34,15 @@ export default {
 }
 
 .cta {
-  justify-content: flex-end;
+  justify-content: center;
 
-  &:after {
+  /*&:after {
     content: ' ';
     width: 2px;
     background-color: $color-grey;
     height: 120px;
     transform: translate(1em, -16px);
-  }
+  }*/
 }
 
 .cta, .audio {
@@ -64,7 +62,7 @@ img {
   display: inline-block;
   font-size: 1em;
   padding-left: .75em;
-  max-width: 15em;
+  max-width: 25em;
   height: auto;
   max-height: 90px;
   vertical-align: middle;
