@@ -1,4 +1,5 @@
 module.exports = {
+  baseUrl: '/art/mobile/dev/underworld/',
   css: {
     loaderOptions: {
       sass: {
