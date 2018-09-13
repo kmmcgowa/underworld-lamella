@@ -2,7 +2,7 @@
   <div id="label">
     <Tombstone :tombstone="this.text.tombstone"></Tombstone>
     <Chat :text="this.text.chat"></Chat>
-    <Credit :loaner="this.text.credit" number="this.credit.number"></Credit>
+    <Credit :loaner="this.text.credit" :number="this.text.number"></Credit>
   </div>
 </template>
 
