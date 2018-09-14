@@ -1,13 +1,20 @@
 <template>
-  <div id="object-screen" class="flex">
+  <div id="object-screen">
+    <Navigation/>
     <div class="artwork">
       <img :src="objectArtwork">
     </div>
-    <Label v-if="config" :text="this.config.label"></Label>
+    <!-- Info box holds and of the right hand content including the label, translation, and audio apparatus -->
+    <!-- Zoom screen will also be placed here, but covers the screen naturally. -->
+    <div id="infoBox">
+      <Label v-if="(config && showLabel)" :text="this.config.label"></Label>
+      <router-view/>
+    </div>
   </div>
 </template>
 
 <script>
+import Navigation from './Navigation'
 import Label from './object/Label'
 
 export default {
@@ -15,12 +22,14 @@ export default {
   name: 'ObjectScreen',
 
   components: {
+    Navigation,
     Label
   },
 
   data () {
     return {
-      config: null
+      config: null,
+      showLabel: true
     }
   },
 
@@ -73,13 +82,27 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 #object-screen {
   margin: 0 1em;
-  > div {
-    flex-basis: 50%;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 60px auto 150px;
+  grid-template-areas:
+          "nav nav"
+          "art info"
+          "options info";
 }
+#main-navigation {
+  grid-area: nav;
+}
+#infoBox {
+  grid-area: info;
+}
+</style>
+
+<style lang="scss" scoped>
+
 img {
   width: 100%;
 }
