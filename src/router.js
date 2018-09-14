@@ -16,6 +16,7 @@ export default new Router({
     },
     {
       path: '/object/:obj_id',
+      name: 'object',
       component: ObjectScreen,
       children: [
         {
