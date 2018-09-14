@@ -1,9 +1,9 @@
 <template>
   <nav id="main-navigation" class="flex">
-    <div class="back" @click="goBack">
+    <div class="back sans-serif" @click="back">
       Back
     </div>
-    <div class="restart" @click="restart">
+    <div class="restart sans-serif" @click="restart">
       Restart
     </div>
   </nav>
@@ -11,15 +11,19 @@
 
 <script>
 export default {
-  name: "Navigation",
+  name: 'Navigation',
 
   methods: {
-    goBack () {
-      this.$router.go(-1)
+    back () {
+      const id = this.$route.params.obj_id
+      this.$router.push({
+        name: 'object',
+        params: { obj_id: id }
+      })
     },
 
     restart () {
-      this.$router.push({name: 'home'})
+      this.$router.push({ name: 'home' })
     }
   }
 }
@@ -31,6 +35,7 @@ nav {
   justify-content: space-between;
   > div {
     cursor: pointer;
+    font-size: 17px;
   }
 }
 </style>
