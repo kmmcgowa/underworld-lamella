@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './components/Home'
 import ObjectScreen from './components/ObjectScreen'
+import Label from './components/object/Label'
 import ZoomScreen from './components/ZoomScreen'
 import TranslateScreen from './components/TranslateScreen'
 
@@ -19,6 +20,11 @@ export default new Router({
       name: 'object',
       component: ObjectScreen,
       children: [
+        {
+          path: '',
+          name: 'label',
+          component: Label
+        },
         {
           path: 'zoom',
           component: ZoomScreen

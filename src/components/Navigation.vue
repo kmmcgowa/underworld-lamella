@@ -17,7 +17,7 @@ export default {
     back () {
       const id = this.$route.params.obj_id
       this.$router.push({
-        name: 'object',
+        name: 'label',
         params: { obj_id: id }
       })
     },

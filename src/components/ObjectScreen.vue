@@ -4,12 +4,13 @@
     <div class="artwork">
       <img :src="objectArtwork">
     </div>
-    <!-- Info box holds and of the right hand content including the label, translation, and audio apparatus -->
-    <!-- Zoom screen will also be placed here, but covers the screen naturally. -->
-    <div id="infoBox">
-      <Label v-if="(config && showLabel)" :text="this.config.label"></Label>
-      <router-view/>
-    </div>
+    <main class="content">
+      <!-- Info box holds and of the right hand content including the label, translation, and audio apparatus -->
+      <!-- Zoom screen will also be placed here, but covers the screen naturally. -->
+      <div id="infoBox">
+        <router-view :config="config"/>
+      </div>
+    </main>
   </div>
 </template>
 
@@ -28,8 +29,7 @@ export default {
 
   data () {
     return {
-      config: null,
-      showLabel: true
+      config: null
     }
   },
 
@@ -102,6 +102,9 @@ export default {
 </style>
 
 <style lang="scss" scoped>
+.content {
+  max-height: 814px;
+}
 
 img {
   width: 100%;
