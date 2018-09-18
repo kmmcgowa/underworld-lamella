@@ -1,9 +1,9 @@
 <template>
   <div id="label">
     <div class="grad-mask">
-      <Tombstone :tombstone="this.text.tombstone"></Tombstone>
-      <Chat :text="this.text.chat"></Chat>
-      <Credit :loaner="this.text.credit" :number="this.text.number"></Credit>
+      <Tombstone :tombstone="config.label.tombstone"></Tombstone>
+      <Chat :text="config.label.chat"></Chat>
+      <Credit :loaner="config.label.credit" :number="config.label.number"></Credit>
     </div>
   </div>
 </template>
@@ -24,7 +24,7 @@ export default {
   },
 
   props: {
-    text: Object
+    config: Object
   },
 
   data () {
@@ -39,7 +39,7 @@ export default {
   #label {
     color: $color-white;
     margin: 0 1em;
-    max-height: 90%;
+    max-height: 814px;
     mask-image: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,1) 2%, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 80%);
     overflow: scroll;
     ::-webkit-scrollbar {
