@@ -15,11 +15,18 @@ export default {
 
   methods: {
     back () {
-      const id = this.$route.params.obj_id
-      this.$router.push({
-        name: 'label',
-        params: { obj_id: id }
-      })
+      /**
+       * If the app is on the label screen go back to the home screen, if not go back to label
+       */
+      if (this.$route.name === 'label') {
+        this.restart()
+      } else {
+        const id = this.$route.params.obj_id
+        this.$router.push({
+          name: 'label',
+          params: { obj_id: id }
+        })
+      }
     },
 
     restart () {

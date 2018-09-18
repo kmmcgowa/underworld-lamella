@@ -1,5 +1,5 @@
 <template>
-  <div id="object-screen">
+  <div id="object-screen" v-if="configReady">
     <Navigation/>
     <div class="artwork">
       <img :src="objectArtwork">
@@ -8,13 +8,14 @@
       <!-- Info box holds and of the right hand content including the label, translation, and audio apparatus -->
       <!-- Zoom screen will also be placed here, but covers the screen naturally. -->
       <div id="infoBox">
-        <router-view :config="config"/>
+        <router-view :config="currentObject"/>
       </div>
     </main>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import Navigation from './Navigation'
 import Label from './object/Label'
 
@@ -27,56 +28,38 @@ export default {
     Label
   },
 
-  data () {
-    return {
-      config: null
-    }
-  },
-
   computed: {
     objectArtwork: function () {
-      if (this.config) {
-        return `/assets/${this.config.image}`
+      if (this.configReady) {
+        return `/assets/${this.currentObject.image}`
       }
       return '/assets/bm1.png'
-    }
+    },
+
+    ...mapGetters([
+      'currentObject',
+      'configReady'
+    ])
   },
 
   watch: {
-    '$route': 'fetchData'
+    '$route': 'setPrimaryObject'
   },
 
   created () {
-    this.fetchData()
+    this.setPrimaryObject()
   },
 
   methods: {
-    fetchData () {
-      let urlId = ''
+    setPrimaryObject () {
+      let id = parseInt(this.$route.params.obj_id)
 
-      switch (this.$route.params.obj_id) {
-        case '1':
-          urlId = 'bm1'
-          break
-        case '2':
-          urlId = 'bm2'
-          break
-        case '3':
-        default:
-          urlId = 'gm'
+      if (isNaN(id)) {
+        console.error('Object Id param is not an Integer')
+        return
       }
 
-      let configUrl = './config.' + urlId + '.json'
-
-      this.$http.get(configUrl)
-        .then(res => {
-          this.config = res.data
-          console.log(this.config)
-        })
-        .catch(err => {
-          // TODO: fail better somehow
-          console.error(err)
-        })
+      this.$store.dispatch('setNewCurrentObject', id)
     }
   }
 }
