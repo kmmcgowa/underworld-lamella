@@ -11,6 +11,7 @@
         <router-view :config="currentObject"/>
       </div>
     </main>
+    <ObjectNavigation/>
   </div>
 </template>
 
@@ -18,6 +19,7 @@
 import { mapGetters } from 'vuex'
 import Navigation from './Navigation'
 import Label from './object/Label'
+import ObjectNavigation from './object/ObjectNavigation'
 
 export default {
 
@@ -25,15 +27,16 @@ export default {
 
   components: {
     Navigation,
-    Label
+    Label,
+    ObjectNavigation
   },
 
   computed: {
     objectArtwork: function () {
       if (this.configReady) {
-        return `/assets/${this.currentObject.image}`
+        return `./assets/${this.currentObject.image}`
       }
-      return '/assets/bm1.png'
+      return './assets/bm1.png'
     },
 
     ...mapGetters([
@@ -67,10 +70,12 @@ export default {
 
 <style lang="scss">
 #object-screen {
-  margin: 0 1em;
+  padding: 0 1em;
+  width: 100%;
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 60px auto 150px;
+  grid-template-rows: 60px 1fr 150px;
   grid-template-areas:
           "nav nav"
           "art info"
@@ -81,6 +86,9 @@ export default {
 }
 #infoBox {
   grid-area: info;
+}
+#object-nav {
+  grid-area: options;
 }
 </style>
 

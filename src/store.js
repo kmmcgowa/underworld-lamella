@@ -31,7 +31,7 @@ export default new Vuex.Store({
   actions: {
     async loadObjects ({ commit }) {
       console.log('load')
-      await Vue.axios.get('/config.json')
+      await Vue.axios.get('./config.json')
         .then(res => res.data)
         .then(objects => {
           console.log('loaded')
