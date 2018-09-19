@@ -13,37 +13,37 @@
         "credit": "Trustees at the British Museum, London, GR 1843, 0724.3",
         "number": "VEX.2018.2.26"
       },
-      "translation": ""
+      "translation": "<p class='content words'>You will find to the left of the house of Hades a spring,<br>and by it stands a white cypress.<br>You should not even come near this spring!<br>But you will find another one, from the Lake of Memory,<br>cold water pouring forth. But there are guardians in front of it.<br>Say, \"I am the child of Earth and Starry Heaven,<br>but my race is heavenly. This you yourselves also know!<br>I am parched with thirst and perishing. Quickly give me<br>cold water pouring forth from the Lake of Memory!\"<br>And they will give you to drink from the divine [la]ke.<br>And thereafter you will reign [with the other] heroes.<br>This is [the \"gift] of [Memory.\" Whenever he is about] to die,<br>[let the dying hero] write this [on a tablet of gold],<br>[before loathsome] darkness [might take him],<br>having enclosed him all around.</p>"
     },
     {
       "id": 2,
       "image": "bm2.png",
       "label": {
         "tombstone": {
-          "name": "222Tablet with Instructions for the Deceased in the Underworld and a Case on a Chain",
-          "dateLocation": "South Italian, 200–100 <span class='small-caps'>bc</span>; Roman, <span class='small-caps'>ad</span> 100–200; Reportedly found together in Petelia (present-day Strongoli, Italy)",
+          "name": "Tablet with Instructions for the Deceased in the Underworld",
+          "dateLocation": "Roman, <span class='small-caps'>ad</span> 100–200; reportedly found in Rome, Italy",
           "material": "Gold"
         },
-        "chat": "The discovery of this inscribed gold tablet, the first of its kind to be found, was published in 1836. Its significance was fully realized only after similar tablets were uncovered elsewhere in southern Italy. The Greek inscription promises the deceased that she “will reign [with the other] heroes” in the Underworld. The tablet was cut down to fit into the Roman amulet case that hangs on a gold chain, suggesting reuse in antiquity—or an adjustment in the nineteenth century.",
-        "credit": "Trustees at the British Museum, London, GR 1843, 0724.3",
-        "number": "VEX.2018.2.26"
+        "chat": "The dates of the inscribed gold tablets range widely, with most falling between the fourth and first century bc. This example is even later, but it retains many elements found in earlier texts: the assertion of its owner’s purity, an address to Persephone (\"Queen of those below\") and other Underworld gods, the utterance of special phrases, and the promise of divine status for the deceased. Exceptionally, however, this Roman tablet preserves the name of the woman for whom it was written, Caecilia Secundina.",
+        "credit": "Trustees at the British Museum, London, GR 1899, 0601.1",
+        "number": "VEX.2018.2.27"
       },
-      "translation": ""
+      "translation": "<div class=\"translate-namespace\"><div class=\"grid content\"><div class=\"speaker\"><p>(Announcers:)</p></div><div class=\"words\"><p>She comes from the Pure Ones, pure Queen of those below,<br>Eucles and Eubouleus, splendid child of Zeus!</p></div><div class=\"speaker\"><p>(Initiate:)</p></div><div class=\"words\"><p>But I have this gift of Memory, sung of by mortals.</p></div><div class=\"speaker\"><p>(Announcers:)</p></div><div class=\"words\"><p>Caecilia Secundina, go to the pasture, having become divine!</p></div></div></div>"
     },
     {
       "id": 3,
       "image": "gm.png",
       "label": {
         "tombstone": {
-          "name": "333Tablet with Instructions for the Deceased in the Underworld and a Case on a Chain",
-          "dateLocation": "South Italian, 200–100 <span class='small-caps'>bc</span>; Roman, <span class='small-caps'>ad</span> 100–200; Reportedly found together in Petelia (present-day Strongoli, Italy)",
+          "name": "Tablet with Instructions for the Deceased in the Underworld",
+          "dateLocation": "Greek, 350–300 <span class='small-caps'>bc</span>",
           "material": "Gold"
         },
-        "chat": "The discovery of this inscribed gold tablet, the first of its kind to be found, was published in 1836. Its significance was fully realized only after similar tablets were uncovered elsewhere in southern Italy. The Greek inscription promises the deceased that she “will reign [with the other] heroes” in the Underworld. The tablet was cut down to fit into the Roman amulet case that hangs on a gold chain, suggesting reuse in antiquity—or an adjustment in the nineteenth century.",
-        "credit": "Trustees at the British Museum, London, GR 1843, 0724.3",
-        "number": "VEX.2018.2.26"
+        "chat": "While the text on this gold tablet repeats motifs that appear on others like it, such as the initiate’s thirst and assertion of heavenly lineage, one variation stands out. The spring located near a cypress invites the deceased to drink from its flowing water, but on other tablets, the tree marks a spring that the dead should avoid. Who inscribed the texts is unknown, and scribal error might account for such a discrepancy. But some divergences could have been intentional: in pursuit of followers, itinerant cult leaders may have offered alternative narratives, each claiming that theirs alone was correct.",
+        "credit": "The J. Paul Getty Museum. Gift of Lenore Barozzi",
+        "number": "75.AM.19"
       },
-      "translation": ""
+      "translation": "<div class=\"translate-namespace\"><div class=\"grid content\"><div class=\"speaker\"><p>(Initiate:)</p></div><div class=\"words\"><p>I am parched with thirst and perishing!</p></div><div class=\"speaker\"><p>(Spring:)</p></div><div class=\"words\"><p>Then drink from me, the Ever-Flowing Spring.<br>On the right there is a bright cypress.<br>Who are you? Where are you from?</p></div><div class=\"speaker\"><p>(Initiate:)</p></div><div class=\"words\"><p>I am the son of Earth and Starry Heaven.<br>But my race is heavenly.</p></div></div></div>"
     }
   ]
 }

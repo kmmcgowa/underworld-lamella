@@ -18,6 +18,10 @@ body {
   color: $color-grey;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 // Fonts stuff
 
 .sans-serif { font-family: $font-sans-serif; }

@@ -36,20 +36,18 @@ export default {
 </script>
 
 <style lang="scss">
-  #label {
-    color: $color-white;
-    margin: 0 1em;
-    max-height: 814px;
-    mask-image: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,1) 2%, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 80%);
-    overflow: scroll;
-    ::-webkit-scrollbar {
-      display: none;
-    }
-    .grad-mask {
-      padding: 10% 0 45%;
-    }
+#label {
+  color: $color-white;
+  margin: 0 1em;
+  padding-right: .5em;
+  max-height: 814px;
+  mask-image: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,1) 2%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
+  overflow: scroll;
+  .grad-mask {
+    padding: 10% 0 45%;
   }
-  #tombstone, #chat {
-    padding-bottom: 50px;
-  }
+}
+#tombstone, #chat {
+  padding-bottom: 50px;
+}
 </style>
