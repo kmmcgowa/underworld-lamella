@@ -2,6 +2,7 @@
 node_modules
 /dist
 raw_assets
+public/assets/zoom_tiles/**/*.jpg
 
 # local env files
 .env.local
