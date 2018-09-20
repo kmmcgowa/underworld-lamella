@@ -2,7 +2,7 @@
   "objects": [
     {
       "id": 1,
-      "image": "bm1.png",
+      "image": "bm1_50p.jpg",
       "label": {
         "tombstone": {
           "name": "Tablet with Instructions for the Deceased in the Underworld and a Case on a Chain",
@@ -13,11 +13,12 @@
         "credit": "Trustees at the British Museum, London, GR 1843, 0724.3",
         "number": "VEX.2018.2.26"
       },
-      "translation": "<p class='content words'>You will find to the left of the house of Hades a spring,<br>and by it stands a white cypress.<br>You should not even come near this spring!<br>But you will find another one, from the Lake of Memory,<br>cold water pouring forth. But there are guardians in front of it.<br>Say, \"I am the child of Earth and Starry Heaven,<br>but my race is heavenly. This you yourselves also know!<br>I am parched with thirst and perishing. Quickly give me<br>cold water pouring forth from the Lake of Memory!\"<br>And they will give you to drink from the divine [la]ke.<br>And thereafter you will reign [with the other] heroes.<br>This is [the \"gift] of [Memory.\" Whenever he is about] to die,<br>[let the dying hero] write this [on a tablet of gold],<br>[before loathsome] darkness [might take him],<br>having enclosed him all around.</p>"
+      "translation": "<p class='content words'>You will find to the left of the house of Hades a spring,<br>and by it stands a white cypress.<br>You should not even come near this spring!<br>But you will find another one, from the Lake of Memory,<br>cold water pouring forth. But there are guardians in front of it.<br>Say, \"I am the child of Earth and Starry Heaven,<br>but my race is heavenly. This you yourselves also know!<br>I am parched with thirst and perishing. Quickly give me<br>cold water pouring forth from the Lake of Memory!\"<br>And they will give you to drink from the divine [la]ke.<br>And thereafter you will reign [with the other] heroes.<br>This is [the \"gift] of [Memory.\" Whenever he is about] to die,<br>[let the dying hero] write this [on a tablet of gold],<br>[before loathsome] darkness [might take him],<br>having enclosed him all around.</p>",
+      "dzi": "./assets/zoom_tiles/bm1.dzi"
     },
     {
       "id": 2,
-      "image": "bm2.png",
+      "image": "bm2_50p.jpg",
       "label": {
         "tombstone": {
           "name": "Tablet with Instructions for the Deceased in the Underworld",
@@ -28,11 +29,12 @@
         "credit": "Trustees at the British Museum, London, GR 1899, 0601.1",
         "number": "VEX.2018.2.27"
       },
-      "translation": "<div class=\"translate-namespace\"><div class=\"grid content\"><div class=\"speaker\"><p>(Announcers:)</p></div><div class=\"words\"><p>She comes from the Pure Ones, pure Queen of those below,<br>Eucles and Eubouleus, splendid child of Zeus!</p></div><div class=\"speaker\"><p>(Initiate:)</p></div><div class=\"words\"><p>But I have this gift of Memory, sung of by mortals.</p></div><div class=\"speaker\"><p>(Announcers:)</p></div><div class=\"words\"><p>Caecilia Secundina, go to the pasture, having become divine!</p></div></div></div>"
+      "translation": "<div class=\"translate-namespace\"><div class=\"grid content\"><div class=\"speaker\"><p>(Announcers:)</p></div><div class=\"words\"><p>She comes from the Pure Ones, pure Queen of those below,<br>Eucles and Eubouleus, splendid child of Zeus!</p></div><div class=\"speaker\"><p>(Initiate:)</p></div><div class=\"words\"><p>But I have this gift of Memory, sung of by mortals.</p></div><div class=\"speaker\"><p>(Announcers:)</p></div><div class=\"words\"><p>Caecilia Secundina, go to the pasture, having become divine!</p></div></div></div>",
+      "dzi": "./assets/zoom_tiles/bm2.dzi"
     },
     {
       "id": 3,
-      "image": "gm.png",
+      "image": "gm_50p.jpg",
       "label": {
         "tombstone": {
           "name": "Tablet with Instructions for the Deceased in the Underworld",
@@ -43,7 +45,8 @@
         "credit": "The J. Paul Getty Museum. Gift of Lenore Barozzi",
         "number": "75.AM.19"
       },
-      "translation": "<div class=\"translate-namespace\"><div class=\"grid content\"><div class=\"speaker\"><p>(Initiate:)</p></div><div class=\"words\"><p>I am parched with thirst and perishing!</p></div><div class=\"speaker\"><p>(Spring:)</p></div><div class=\"words\"><p>Then drink from me, the Ever-Flowing Spring.<br>On the right there is a bright cypress.<br>Who are you? Where are you from?</p></div><div class=\"speaker\"><p>(Initiate:)</p></div><div class=\"words\"><p>I am the son of Earth and Starry Heaven.<br>But my race is heavenly.</p></div></div></div>"
+      "translation": "<div class=\"translate-namespace\"><div class=\"grid content\"><div class=\"speaker\"><p>(Initiate:)</p></div><div class=\"words\"><p>I am parched with thirst and perishing!</p></div><div class=\"speaker\"><p>(Spring:)</p></div><div class=\"words\"><p>Then drink from me, the Ever-Flowing Spring.<br>On the right there is a bright cypress.<br>Who are you? Where are you from?</p></div><div class=\"speaker\"><p>(Initiate:)</p></div><div class=\"words\"><p>I am the son of Earth and Starry Heaven.<br>But my race is heavenly.</p></div></div></div>",
+      "dzi": "./assets/zoom_tiles/gm.dzi"
     }
   ]
 }

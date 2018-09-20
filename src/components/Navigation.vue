@@ -38,6 +38,7 @@ export default {
 
 <style lang="scss" scoped>
 nav {
+  z-index: 1000;
   flex-basis: 100%;
   justify-content: space-between;
   > div {

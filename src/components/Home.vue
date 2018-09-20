@@ -4,19 +4,11 @@
       <h1 class="serif bold color-orange title">PASSPORTS TO A BETTER AFTERLIFE</h1>
     </header>
     <main class="flex tablet-container">
-      <div class="tablet-box tablet-bm1">
-        <router-link to="/object/1">
-          <img src="../assets/bm1.png" alt="">
-        </router-link>
-      </div>
-      <div class="tablet-box tablet-bm2">
-        <router-link to="/object/2">
-          <img src="../assets/bm2.png" alt="">
-        </router-link>
-      </div>
-      <div class="tablet-box tablet-bm3">
-        <router-link to="/object/3">
-          <img src="../assets/gm.png" alt="">
+      <div v-for="obj in objects"
+           :key="obj.id"
+           :class="['tablet-box', 'tablet-' + obj.id]">
+        <router-link :to="`/object/${obj.id}`">
+          <img :src="`./assets/${obj.image}`" :alt="obj.label.tombstone.name">
         </router-link>
       </div>
     </main>
@@ -25,6 +17,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import HomeFooter from './home/HomeFooter'
 
 export default {
@@ -35,16 +28,15 @@ export default {
     HomeFooter
   },
 
+  computed: {
+    ...mapGetters({
+      objects: 'allObjects'
+    })
+  },
+
   data () {
     return {
 
-    }
-  },
-
-  props: {
-    tablets: {
-      type: Object,
-      required: false
     }
   }
 }
@@ -65,7 +57,7 @@ export default {
 
 .tablet-container {
   padding: 0 2em;
-  flex-wrap: no-wrap;
+  flex-wrap: nowrap;
   width: 100%;
   height: 60%;
 
@@ -77,5 +69,13 @@ export default {
     width: 100%;
   }
 }
-
+.tablet-1 img {
+  padding: 0 1.5em;
+}
+.tablet-2 img {
+ transform: scale(1.1);
+}
+.tablet-3 img{
+  padding: 0 1.5em;
+}
 </style>

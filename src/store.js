@@ -16,6 +16,10 @@ export default new Vuex.Store({
 
     configReady: state => {
       return state.objects.length !== 0
+    },
+
+    allObjects: state => {
+      return state.objects
     }
   },
   mutations: {
