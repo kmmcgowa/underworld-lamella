@@ -2,7 +2,7 @@
   <div id="object-screen" v-if="configReady">
     <Navigation/>
     <div class="artwork">
-      <img :src="objectArtwork">
+      <img :src="objectArtwork" class="primary-img">
     </div>
     <main class="content">
       <!-- Info box holds and of the right hand content including the label, translation, and audio apparatus -->
@@ -16,56 +16,56 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import Navigation from './Navigation'
-import Label from './object/Label'
-import ObjectNavigation from './object/ObjectNavigation'
+  import { mapGetters } from 'vuex'
+  import Navigation from './Navigation'
+  import Label from './object/Label'
+  import ObjectNavigation from './object/ObjectNavigation'
 
-export default {
+  export default {
 
-  name: 'ObjectScreen',
+    name: 'ObjectScreen',
 
-  components: {
-    Navigation,
-    Label,
-    ObjectNavigation
-  },
-
-  computed: {
-    objectArtwork: function () {
-      if (this.configReady) {
-        return `./assets/${this.currentObject.image}`
-      }
-      return './assets/bm1.png'
+    components: {
+      Navigation,
+      Label,
+      ObjectNavigation
     },
 
-    ...mapGetters([
-      'currentObject',
-      'configReady'
-    ])
-  },
+    computed: {
+      objectArtwork: function () {
+        if (this.configReady) {
+          return `./assets/${this.currentObject.image}`
+        }
+        return './assets/bm1.png'
+      },
 
-  watch: {
-    '$route': 'setPrimaryObject'
-  },
+      ...mapGetters([
+        'currentObject',
+        'configReady'
+      ])
+    },
 
-  created () {
-    this.setPrimaryObject()
-  },
+    watch: {
+      '$route': 'setPrimaryObject'
+    },
 
-  methods: {
-    setPrimaryObject () {
-      let id = parseInt(this.$route.params.obj_id)
+    created () {
+      this.setPrimaryObject()
+    },
 
-      if (isNaN(id)) {
-        console.error('Object Id param is not an Integer')
-        return
+    methods: {
+      setPrimaryObject () {
+        let id = parseInt(this.$route.params.obj_id)
+
+        if (isNaN(id)) {
+          console.error('Object Id param is not an Integer')
+          return
+        }
+
+        this.$store.dispatch('setNewCurrentObject', id)
       }
-
-      this.$store.dispatch('setNewCurrentObject', id)
     }
   }
-}
 </script>
 
 <style lang="scss">
@@ -97,7 +97,8 @@ export default {
   max-height: 814px;
 }
 
-img {
+.primary-img {
   width: 100%;
+  margin-top: 3em;
 }
 </style>

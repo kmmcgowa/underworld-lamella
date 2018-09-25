@@ -5,14 +5,14 @@
 </template>
 
 <script>
-export default {
+  export default {
 
-  name: 'Chat',
+    name: 'Chat',
 
-  props: {
-    text: String
+    props: {
+      text: String
+    }
   }
-}
 </script>
 
 <style lang="scss" scoped>

@@ -12,16 +12,16 @@
 </template>
 
 <script>
-export default {
+  export default {
 
-  name: 'HomeFooter',
+    name: 'HomeFooter',
 
-  data () {
-    return {
+    data () {
+      return {
 
+      }
     }
   }
-}
 </script>
 
 <style lang="scss" scoped>

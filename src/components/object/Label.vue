@@ -9,30 +9,30 @@
 </template>
 
 <script>
-import Tombstone from './Tombstone'
-import Chat from './Chat'
-import Credit from './Credit'
+  import Tombstone from './Tombstone'
+  import Chat from './Chat'
+  import Credit from './Credit'
 
-export default {
+  export default {
 
-  name: 'Label',
+    name: 'Label',
 
-  components: {
-    Tombstone,
-    Chat,
-    Credit
-  },
+    components: {
+      Tombstone,
+      Chat,
+      Credit
+    },
 
-  props: {
-    config: Object
-  },
+    props: {
+      config: Object
+    },
 
-  data () {
-    return {
+    data () {
+      return {
 
+      }
     }
   }
-}
 </script>
 
 <style lang="scss">

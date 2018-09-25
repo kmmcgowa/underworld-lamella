@@ -7,16 +7,16 @@
 <script>
 // import Tablet from './models/tablet'
 
-export default {
+  export default {
 
-  name: 'App',
+    name: 'App',
 
-  data () {
-    return {
+    data () {
+      return {
 
+      }
     }
   }
-}
 </script>
 
 <style lang="scss">

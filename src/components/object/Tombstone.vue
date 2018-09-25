@@ -7,20 +7,20 @@
 </template>
 
 <script>
-export default {
+  export default {
 
-  name: 'Tombstone',
+    name: 'Tombstone',
 
-  props: {
-    tombstone: Object
-  },
+    props: {
+      tombstone: Object
+    },
 
-  data () {
-    return {
+    data () {
+      return {
 
+      }
     }
   }
-}
 </script>
 
 <style lang="scss" scoped>

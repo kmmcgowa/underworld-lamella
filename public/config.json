@@ -46,6 +46,7 @@
         "number": "75.AM.19"
       },
       "translation": "<div class=\"translate-namespace\"><div class=\"grid content\"><div class=\"speaker\"><p>(Initiate:)</p></div><div class=\"words\"><p>I am parched with thirst and perishing!</p></div><div class=\"speaker\"><p>(Spring:)</p></div><div class=\"words\"><p>Then drink from me, the Ever-Flowing Spring.<br>On the right there is a bright cypress.<br>Who are you? Where are you from?</p></div><div class=\"speaker\"><p>(Initiate:)</p></div><div class=\"words\"><p>I am the son of Earth and Starry Heaven.<br>But my race is heavenly.</p></div></div></div>",
+      "audio": "./assets/audio/gm.mp3",
       "dzi": "./assets/zoom_tiles/gm.dzi"
     }
   ]

@@ -10,30 +10,30 @@
 </template>
 
 <script>
-export default {
-  name: 'Navigation',
+  export default {
+    name: 'Navigation',
 
-  methods: {
-    back () {
-      /**
-       * If the app is on the label screen go back to the home screen, if not go back to label
-       */
-      if (this.$route.name === 'label') {
-        this.restart()
-      } else {
-        const id = this.$route.params.obj_id
-        this.$router.push({
-          name: 'label',
-          params: { obj_id: id }
-        })
+    methods: {
+      back () {
+        /**
+         * If the app is on the label screen go back to the home screen, if not go back to label
+         */
+        if (this.$route.name === 'label') {
+          this.restart()
+        } else {
+          const id = this.$route.params.obj_id
+          this.$router.push({
+            name: 'label',
+            params: { obj_id: id }
+          })
+        }
+      },
+
+      restart () {
+        this.$router.push({ name: 'home' })
       }
-    },
-
-    restart () {
-      this.$router.push({ name: 'home' })
     }
   }
-}
 </script>
 
 <style lang="scss" scoped>

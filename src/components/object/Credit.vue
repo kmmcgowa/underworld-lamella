@@ -6,15 +6,15 @@
 </template>
 
 <script>
-export default {
+  export default {
 
-  name: 'Credit',
+    name: 'Credit',
 
-  props: {
-    loaner: String,
-    number: String
+    props: {
+      loaner: String,
+      number: String
+    }
   }
-}
 </script>
 
 <style lang="scss" scoped>

@@ -3,30 +3,37 @@
     <div id="main-translation" class="content" v-html="config.translation"></div>
     <p v-if="brackets" class="brackets sans-serif">Bracketed sections indicate reconstruction of the text.</p>
     <p class="credit sans-serif">Translation by Roy D. Kotansky</p>
+    <TranslateAudio v-if="config.audio" :mp3="config.audio"/>
   </div>
 </template>
 
 <script>
-export default {
+  import TranslateAudio from './translate/TranslateAudio'
 
-  name: 'TranslateScreen',
+  export default {
 
-  props: {
-    config: Object
-  },
+    name: 'TranslateScreen',
 
-  computed: {
-    brackets () {
-      return this.$route.params.obj_id === '1'
-    }
-  },
+    components: {
+      TranslateAudio
+    },
 
-  data () {
-    return {
+    props: {
+      config: Object
+    },
 
+    computed: {
+      brackets () {
+        return this.$route.params.obj_id === '1'
+      }
+    },
+
+    data () {
+      return {
+
+      }
     }
   }
-}
 </script>
 
 <style lang="scss" scoped>

@@ -17,29 +17,29 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import HomeFooter from './home/HomeFooter'
+  import { mapGetters } from 'vuex'
+  import HomeFooter from './home/HomeFooter'
 
-export default {
+  export default {
 
-  name: 'Home',
+    name: 'Home',
 
-  components: {
-    HomeFooter
-  },
+    components: {
+      HomeFooter
+    },
 
-  computed: {
-    ...mapGetters({
-      objects: 'allObjects'
-    })
-  },
+    computed: {
+      ...mapGetters({
+        objects: 'allObjects'
+      })
+    },
 
-  data () {
-    return {
+    data () {
+      return {
 
+      }
     }
   }
-}
 </script>
 
 <style lang="scss" scoped>

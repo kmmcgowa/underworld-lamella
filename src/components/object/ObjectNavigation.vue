@@ -16,9 +16,9 @@
 </template>
 
 <script>
-export default {
-  name: 'ObjectNavigation'
-}
+  export default {
+    name: 'ObjectNavigation'
+  }
 </script>
 
 <style lang="scss" scoped>
@@ -32,6 +32,7 @@ export default {
 
     img {
       width: 75px;
+      height: 75px;
       margin-bottom: .1em;
     }
   }
@@ -42,6 +43,9 @@ export default {
   color: $color-grey;
   &:visited {
     color: $color-grey;
+  }
+  &.router-link-active img {
+    opacity: .5;
   }
 }
 </style>
