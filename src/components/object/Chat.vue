@@ -1,6 +1,6 @@
 <template>
   <div id="chat">
-    <p>{{ text }}</p>
+    <p v-html="text"></p>
   </div>
 </template>
 
