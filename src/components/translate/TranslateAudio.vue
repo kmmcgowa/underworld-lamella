@@ -1,6 +1,7 @@
 <template>
   <section class="audio-container flex">
-    <img src="@/assets/play_btn.svg" alt="Play Audio Snippet" class="audio-btn" @click="playAudio">
+    <img src="@/assets/play_btn.svg" alt="Play Audio Snippet" class="audio-btn" @click="toggleAudio" v-if="playIcon">
+    <img src="@/assets/stop_btn.svg" alt="Stop Audio Snippet" class="audio-btn" @click="toggleAudio" v-else>
     <p class="audio-cta">Hear this Orphic tablet inscription,<br>recited in ancient Greek.</p>
     <audio ref="audio" class="main-audio">
       <source :src="mp3" type="audio/mp3">
@@ -21,7 +22,8 @@
 
     data () {
       return {
-        player: {}
+        player: {},
+        playIcon: true
       }
     },
 
@@ -37,10 +39,14 @@
     },
 
     methods: {
-      playAudio () {
+      toggleAudio () {
+        this.playIcon = !this.playIcon
+
         if (!this.player.playing) {
           this.player.play()
+          return
         }
+        this.player.stop()
       }
     }
   }
@@ -67,6 +73,6 @@
 
 <style lang="scss">
   .plyr {
-    min-width: 0px !important;
+    min-width: 0 !important;
   }
 </style>

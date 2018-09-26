@@ -26,10 +26,12 @@ export default new Router({
         },
         {
           path: 'zoom',
+          name: 'zoom',
           component: ZoomScreen
         },
         {
           path: 'translation',
+          name: 'translation',
           component: TranslateScreen
         }
       ]
