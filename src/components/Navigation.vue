@@ -63,11 +63,17 @@
         transform: translateY(25%);
       }
     }
-    
+
     &.zoom-active > div {
       background-color: rgba($color-black, .75);
       border-radius: 5px;
       border: 2px solid $color-black;
+      &.back {
+        transform: translateX(-2px);
+      }
+      &.restart {
+        transform: translateX(2px);
+      }
     }
   }
 </style>

@@ -2,13 +2,13 @@
   <div id="object-nav" class="flex sans-serif">
     <router-link :to="`/object/${this.$route.params.obj_id}/zoom`" class="nav-link">
       <div class="option flex">
-        <img src="@/assets/zoom.svg" alt="Zoom">
+        <img src="@/assets/zoom.svg" alt="Zoom" class="smaller">
         <h6>Zoom</h6>
       </div>
     </router-link>
     <router-link :to="`/object/${this.$route.params.obj_id}/translation`" class="nav-link">
       <div class="option flex">
-        <img src="@/assets/zoom.svg" alt="Translate">
+        <img src="@/assets/translate.svg" alt="Translate">
         <h6>Translate</h6>
       </div>
     </router-link>
@@ -34,6 +34,9 @@
       width: 75px;
       height: 75px;
       margin-bottom: .1em;
+      &.smaller {
+        padding: 5px;
+      }
     }
   }
 }

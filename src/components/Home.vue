@@ -1,7 +1,7 @@
 <template>
   <div class="home-container flex">
     <header class="flex">
-      <h1 class="serif bold color-orange title">PASSPORTS TO A BETTER AFTERLIFE</h1>
+      <h1 class="title-font color-orange title">PASSPORTS TO A BETTER AFTERLIFE</h1>
     </header>
     <main class="flex tablet-container">
       <div v-for="obj in objects"
@@ -52,7 +52,9 @@
 .title {
   text-align: center;
   align-self: center;
-  padding-top: 1em;
+  padding-top: .75em;
+  letter-spacing: 2px;
+  font-size: 2.5em;
 }
 
 .tablet-container {
