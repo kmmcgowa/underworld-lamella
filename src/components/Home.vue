@@ -30,8 +30,17 @@
 
     computed: {
       ...mapGetters({
-        objects: 'allObjects'
+        objects: 'allObjects',
+        coords: 'animationCoords'
       })
+    },
+
+    beforeRouteLeave (to, _, next) {
+      const id = to.params.obj_id
+      const image = document.querySelectorAll('main img')[id - 1]
+      const bounds = image.getBoundingClientRect()
+      this.$store.commit('setCoordinates', bounds)
+      next()
     },
 
     data () {

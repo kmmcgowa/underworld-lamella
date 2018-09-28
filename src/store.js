@@ -6,20 +6,25 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     objects: [],
-    currentObject: null
+    currentObject: null,
+    lastObjCoordinates: null
   },
   getters: {
-    currentObject: (state) => {
+    currentObject (state) {
       if (!state.currentObject) { return null }
       return state.objects[state.currentObject - 1]
     },
 
-    configReady: state => {
+    configReady (state) {
       return state.objects.length !== 0
     },
 
-    allObjects: state => {
+    allObjects (state) {
       return state.objects
+    },
+
+    animationCoords (state) {
+      return state.lastObjCoordinates
     }
   },
   mutations: {
@@ -30,6 +35,10 @@ export default new Vuex.Store({
 
     setCurrentObject (state, index) {
       state.currentObject = index
+    },
+
+    setCoordinates (state, coords) {
+      state.lastObjCoordinates = coords
     }
   },
   actions: {

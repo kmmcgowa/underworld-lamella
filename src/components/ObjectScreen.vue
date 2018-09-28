@@ -2,7 +2,7 @@
   <div id="object-screen" v-if="configReady">
     <Navigation/>
     <div class="artwork">
-      <img :src="objectArtwork" class="primary-img">
+      <img :src="objectArtwork" class="primary-img" ref="image">
     </div>
     <main class="content">
       <!-- Info box holds and of the right hand content including the label, translation, and audio apparatus -->
@@ -41,7 +41,8 @@
 
       ...mapGetters([
         'currentObject',
-        'configReady'
+        'configReady',
+        'animationCoords'
       ])
     },
 
@@ -51,6 +52,32 @@
 
     created () {
       this.setPrimaryObject()
+    },
+
+    mounted () {
+      if (!this.animationCoords && !this.$refs.image) { return }
+      const image = this.$refs.image
+      const lastBounds = image.getBoundingClientRect()
+
+      const deltaX = this.animationCoords.left - lastBounds.left
+      const deltaY = this.animationCoords.top - lastBounds.top
+      const deltaW = this.animationCoords.width / lastBounds.width
+      const deltaH = this.animationCoords.height / lastBounds.height
+
+      image.animate([{
+        transfromOrigin: 'top left',
+        transform: `
+          translate(${deltaX}px, ${deltaY}px)
+          scale(${deltaW},${deltaH})
+        `
+      }, {
+        transfromOrigin: 'top left',
+        transform: 'none'
+      }], {
+        duration: 500,
+        easing: 'ease-in-out',
+        fill: 'both'
+      })
     },
 
     methods: {
@@ -64,6 +91,14 @@
 
         this.$store.dispatch('setNewCurrentObject', id)
       }
+    },
+
+    beforeRouteLeave (to, _from, next) {
+      if (to.name !== 'home') { next() }
+      const image = document.querySelector('.primary-img')
+      const bounds = image.getBoundingClientRect()
+      this.$store.commit('setCoordinates', bounds)
+      next()
     }
   }
 </script>

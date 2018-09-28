@@ -5,7 +5,7 @@
 </template>
 
 <script>
-// import Tablet from './models/tablet'
+  import 'web-animations-js'
 
   export default {
 
