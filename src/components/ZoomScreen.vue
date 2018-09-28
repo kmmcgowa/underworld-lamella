@@ -60,14 +60,14 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 2;
+  z-index: 4;
 }
 #osd {
   width: 100%;
   height: 100%;
 }
 .zoom-controls {
-  z-index: 3;
+  z-index: 5;
 }
 .zoom-btn {
   position: fixed !important;

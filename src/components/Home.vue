@@ -1,18 +1,21 @@
 <template>
   <div class="home-container flex">
     <header class="flex">
-      <h1 class="title-font color-orange title">PASSPORTS TO A BETTER AFTERLIFE</h1>
+      <h1 class="title-font color-orange title"
+          :class="{ visible: animationOver, show: (previousObjCheck === null) }">PASSPORTS TO A BETTER AFTERLIFE</h1>
     </header>
     <main class="flex tablet-container">
       <div v-for="obj in objects"
            :key="obj.id"
            :class="['tablet-box', 'tablet-' + obj.id]">
         <router-link :to="`/object/${obj.id}`">
-          <img :src="`./assets/${obj.image}`" :alt="obj.label.tombstone.name">
+          <img :src="`./assets/${obj.image}`"
+               :alt="obj.label.tombstone.name"
+               :class="[(obj.id === previousObjCheck || previousObjCheck === null) ? 'show' : '', animationOver ? 'visible' : 'fade']">
         </router-link>
       </div>
     </main>
-    <HomeFooter/>
+    <HomeFooter :class="{ visible: animationOver, show: (previousObjCheck === null) }"/>
   </div>
 </template>
 
@@ -31,8 +34,56 @@
     computed: {
       ...mapGetters({
         objects: 'allObjects',
-        coords: 'animationCoords'
+        animationCoords: 'animationCoords',
+        previousObj: 'currentObject'
+      }),
+
+      previousObjCheck () {
+        return this.previousObj ? this.previousObj.id : null
+      }
+    },
+
+    mounted () {
+      if (!this.animationCoords) { return }
+      const id = this.previousObj.id - 1
+      const image = document.querySelectorAll('main img')[id]
+      const lastBounds = image.getBoundingClientRect()
+
+      const deltaX = this.animationCoords.left - lastBounds.left
+      const deltaY = this.animationCoords.top - lastBounds.top
+      const scale = this.animationCoords.width / lastBounds.width
+
+      let adjustedScale
+      switch (id) {
+      case 0:
+      case 2:
+        adjustedScale = 0.8
+        break
+      case 1:
+        adjustedScale = 1.1
+        break
+      default:
+        adjustedScale = 1
+      }
+
+      let ani = image.animate([{
+        transformOrigin: 'top left',
+        transform: `
+          translate(${deltaX}px, ${deltaY}px)
+          scale(${scale})
+        `
+      }, {
+        transformOrigin: 'center center',
+        transform: `scale(${adjustedScale})`
+      }], {
+        duration: 500,
+        easing: 'ease-in-out',
+        fill: 'both'
       })
+
+      ani.onfinish = () => {
+        this.animationOver = true
+      }
     },
 
     beforeRouteLeave (to, _, next) {
@@ -45,7 +96,7 @@
 
     data () {
       return {
-
+        animationOver: false
       }
     }
   }
@@ -74,19 +125,48 @@
 
   & > .tablet-box {
     align-self: center;
+    padding: 0 .15em;
   }
 
   img {
     width: 100%;
+    z-index: 3;
   }
 }
 .tablet-1 img {
-  padding: 0 1.5em;
+  /*padding: 0 1.5em;*/
+  transform: scale(.8);
 }
 .tablet-2 img {
  transform: scale(1.1);
 }
 .tablet-3 img{
-  padding: 0 1.5em;
+  /*padding: 0 1.5em;*/
+  transform: scale(.8);
+
 }
+
+  .title, .home-footer-container {
+    opacity: 0;
+    transition: opacity .3s ease;
+    &.visible {
+      opacity: 1;
+    }
+    &.show {
+      opacity: 1 !important;
+    }
+  }
+
+  .tablet-container img {
+    transition: opacity .3s ease;
+    &.fade {
+      opacity: 0;
+    }
+    &.visible {
+      opacity: 1;
+    }
+    &.show {
+      opacity: 1 !important;
+    }
+  }
 </style>

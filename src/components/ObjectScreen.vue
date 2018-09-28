@@ -4,14 +4,14 @@
     <div class="artwork">
       <img :src="objectArtwork" class="primary-img" ref="image">
     </div>
-    <main class="content">
+    <main class="content" :class="{visible: animationOver}">
       <!-- Info box holds and of the right hand content including the label, translation, and audio apparatus -->
       <!-- Zoom screen will also be placed here, but covers the screen naturally. -->
       <div id="infoBox">
         <router-view :config="currentObject"/>
       </div>
     </main>
-    <ObjectNavigation/>
+    <ObjectNavigation :class="{visible: animationOver}"/>
   </div>
 </template>
 
@@ -29,6 +29,12 @@
       Navigation,
       Label,
       ObjectNavigation
+    },
+
+    data () {
+      return {
+        animationOver: false
+      }
     },
 
     computed: {
@@ -61,23 +67,26 @@
 
       const deltaX = this.animationCoords.left - lastBounds.left
       const deltaY = this.animationCoords.top - lastBounds.top
-      const deltaW = this.animationCoords.width / lastBounds.width
-      const deltaH = this.animationCoords.height / lastBounds.height
+      const scale = this.animationCoords.width / lastBounds.width
 
-      image.animate([{
-        transfromOrigin: 'top left',
+      let ani = image.animate([{
+        transformOrigin: 'top left',
         transform: `
           translate(${deltaX}px, ${deltaY}px)
-          scale(${deltaW},${deltaH})
+          scale(${scale})
         `
       }, {
-        transfromOrigin: 'top left',
+        transformOrigin: 'top left',
         transform: 'none'
       }], {
         duration: 500,
         easing: 'ease-in-out',
         fill: 'both'
       })
+
+      ani.onfinish = () => {
+        this.animationOver = true
+      }
     },
 
     methods: {
@@ -128,12 +137,22 @@
 </style>
 
 <style lang="scss" scoped>
-.content {
-  max-height: 814px;
-}
+  .content {
+    max-height: 814px;
+  }
 
-.primary-img {
-  width: 100%;
-  margin-top: 3em;
-}
+  .content, #object-nav {
+    opacity: 0;
+    transition: opacity .3s ease;
+    &.visible {
+      opacity: 1;
+    }
+  }
+
+  .primary-img {
+    width: 100%;
+    margin-top: 3em;
+    z-index: 3;
+    opacity: 1 !important;
+  }
 </style>
