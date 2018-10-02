@@ -5,8 +5,6 @@
 </template>
 
 <script>
-  import 'web-animations-js'
-
   export default {
 
     name: 'App',
