@@ -1,8 +1,8 @@
 <template>
   <div class="home-container flex">
     <header class="flex">
-      <h1 class="title-font color-orange title"
-          :class="{ visible: animationOver, show: (previousObjCheck === null) }">PASSPORTS TO A BETTER AFTERLIFE</h1>
+      <h1 class="sans-serif color-white title"
+          :class="{ visible: animationOver, show: (previousObjCheck === null) }">Passports to a Better Afterlife</h1>
     </header>
     <main class="flex tablet-container">
       <div v-for="obj in objects"
@@ -113,8 +113,7 @@
   text-align: center;
   align-self: center;
   padding-top: .75em;
-  letter-spacing: 2px;
-  font-size: 2.5em;
+  font-size: 2em;
 }
 
 .tablet-container {

@@ -6,6 +6,7 @@
         <h6>Zoom</h6>
       </div>
     </router-link>
+    <!--TODO: toggle between translate and label-->
     <router-link :to="`/object/${this.$route.params.obj_id}/translation`" class="nav-link">
       <div class="option flex">
         <img src="@/assets/translate.svg" alt="Translate">
@@ -22,33 +23,33 @@
 </script>
 
 <style lang="scss" scoped>
-#object-nav {
-  justify-content: center;
-  .option {
-    flex-wrap: wrap;
+  #object-nav {
     justify-content: center;
-    max-width: 3em;
-    margin: .5em;
+    .option {
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 3em;
+      margin: .5em;
 
-    img {
-      width: 75px;
-      height: 75px;
-      margin-bottom: .1em;
-      &.smaller {
-        padding: 5px;
+      img {
+        width: 75px;
+        height: 75px;
+        margin-bottom: .1em;
+        &.smaller {
+          padding: 5px;
+        }
       }
     }
   }
-}
 
-.nav-link {
-  text-decoration: none;
-  color: $color-grey;
-  &:visited {
+  .nav-link {
+    text-decoration: none;
     color: $color-grey;
+    &:visited {
+      color: $color-grey;
+    }
+    &.router-link-active img {
+      opacity: .5;
+    }
   }
-  &.router-link-active img {
-    opacity: .5;
-  }
-}
 </style>

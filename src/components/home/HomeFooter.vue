@@ -2,7 +2,7 @@
   <div class="home-footer-container flex color-orange">
     <div class="cta flex action">
       <img class="icon" src="../../assets/touch_explore.png">
-      <p class="description">Touch an object to explore a gold tablet up close, read the translated text, and learn more about these tablets.</p>
+      <p class="description color-white">Touch an Object to Learn More</p>
     </div>
     <!--<div class="audio flex action">-->
       <!--<img class="icon" src="../../assets/play_btn.svg">-->
@@ -66,7 +66,7 @@ img {
   height: auto;
   max-height: 90px;
   vertical-align: middle;
-  line-height: 45px;
+  line-height: 90px;
 }
 
 </style>
