@@ -61,7 +61,10 @@
     },
 
     mounted () {
-      if (!this.animationCoords && !this.$refs.image) { return }
+      if (!this.animationCoords && !this.$refs.image) {
+        this.animationOver = true
+        return
+      }
       const image = this.$refs.image
       const lastBounds = image.getBoundingClientRect()
 

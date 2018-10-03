@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{fill:#C96E3A;}
+</style>
+<g class="st0">
+	<image style="display:inline;overflow:visible;" width="100" height="100" xlink:href="i_shell.png" >
+	</image>
+</g>
+<g>
+	<path class="st1" d="M50,4c25.4,0,46,20.6,46,46S75.4,96,50,96S4,75.4,4,50S24.6,4,50,4 M50,0C22.4,0,0,22.4,0,50s22.4,50,50,50
+		s50-22.4,50-50S77.6,0,50,0L50,0z"/>
+</g>
+<circle class="st1" cx="49.5" cy="24.5" r="6.5"/>
+<polygon class="st1" points="38,37 55,37 55,76 62,76 62,80 38,80 38,76 45,76 45,41 38,41 "/>
+</svg>

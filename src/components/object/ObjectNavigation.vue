@@ -7,10 +7,14 @@
       </div>
     </router-link>
     <!--TODO: toggle between translate and label-->
-    <router-link :to="`/object/${this.$route.params.obj_id}/translation`" class="nav-link">
-      <div class="option flex">
+    <router-link :to="linkToggle" class="nav-link">
+      <div class="option flex" v-if="(this.$route.name !== 'translation')">
         <img src="@/assets/translate.svg" alt="Translate">
-        <h6>Translate</h6>
+        <h6>Translate Tablet</h6>
+      </div>
+      <div class="option flex" v-else>
+        <img src="@/assets/i_shell.svg" alt="Label Chat" class="info-btn smaller">
+        <h6>Label Chat</h6>
       </div>
     </router-link>
   </div>
@@ -18,7 +22,15 @@
 
 <script>
   export default {
-    name: 'ObjectNavigation'
+    name: 'ObjectNavigation',
+
+    computed: {
+      linkToggle () {
+        return this.$route.name === 'translation'
+          ? `/object/${this.$route.params.obj_id}`
+          : `/object/${this.$route.params.obj_id}/translation`
+      }
+    }
   }
 </script>
 
@@ -28,16 +40,21 @@
     .option {
       flex-wrap: wrap;
       justify-content: center;
-      max-width: 3em;
+      width: 5.2em;
       margin: .5em;
 
       img {
-        width: 75px;
-        height: 75px;
-        margin-bottom: .1em;
+        width: 75px !important;
+        height: 75px !important;
+        margin: 0 auto .1em;
+        padding: 0;
+        flex-basis: 100%;
         &.smaller {
           padding: 5px;
         }
+      }
+      h6 {
+        display: block;
       }
     }
   }
@@ -49,7 +66,7 @@
       color: $color-grey;
     }
     &.router-link-active img {
-      opacity: .5;
+      // opacity: .5;
     }
   }
 </style>
