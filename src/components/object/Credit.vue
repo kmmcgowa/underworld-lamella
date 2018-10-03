@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h5 class="copyright sans-serif">{{ loaner }}</h5>
-    <h5 class="accession-number sans-serif">{{ number }}</h5>
+    <!--<h5 class="copyright sans-serif">{{ loaner }}</h5>-->
+    <p class="accession-number sans-serif">{{ number }}</p>
   </div>
 </template>
 
@@ -11,7 +11,7 @@
     name: 'Credit',
 
     props: {
-      loaner: String,
+      // loaner: String,
       number: String
     }
   }

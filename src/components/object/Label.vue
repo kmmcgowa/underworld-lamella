@@ -1,9 +1,9 @@
 <template>
   <div id="label">
     <div class="grad-mask">
-      <Tombstone :tombstone="config.label.tombstone"></Tombstone>
       <Chat :text="config.label.chat"></Chat>
-      <Credit :loaner="config.label.credit" :number="config.label.number"></Credit>
+      <Tombstone :tombstone="config.label.tombstone"></Tombstone>
+      <Credit :number="config.label.number"></Credit>
     </div>
   </div>
 </template>
@@ -44,10 +44,14 @@
     mask-image: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,1) 2%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
     overflow: scroll;
     .grad-mask {
-      padding: 10% 0 45%;
+      // padding: 10% 0 45%;
+      padding: 10% 0 10%;
     }
   }
-  #tombstone, #chat {
-    padding-bottom: 50px;
+  #tombstone {
+    padding-bottom: 0.5em;
+  }
+  #chat {
+    padding-bottom: 1.6em;
   }
 </style>
