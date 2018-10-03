@@ -1,6 +1,6 @@
 <template>
   <div class="home-container flex">
-    <header class="flex">
+    <header class="flex home-header">
       <h1 class="sans-serif color-white title"
           :class="{ visible: animationOver, show: (previousObjCheck === null) }">Passports to a Better Afterlife</h1>
     </header>
@@ -15,7 +15,7 @@
         </router-link>
       </div>
     </main>
-    <HomeFooter :class="{ visible: animationOver, show: (previousObjCheck === null) }"/>
+    <HomeFooter class="home-footer" :class="{ visible: animationOver, show: (previousObjCheck === null) }"/>
   </div>
 </template>
 
@@ -44,7 +44,10 @@
     },
 
     mounted () {
-      if (!this.animationCoords) { return }
+      if (!this.animationCoords) {
+        this.animationOver = true
+        return
+      }
       const id = this.previousObj.id - 1
       const image = document.querySelectorAll('main img')[id]
       const lastBounds = image.getBoundingClientRect()
@@ -57,10 +60,10 @@
       switch (id) {
       case 0:
       case 2:
-        adjustedScale = 0.8
+        adjustedScale = 0.9
         break
       case 1:
-        adjustedScale = 1.1
+        adjustedScale = 0.85
         break
       default:
         adjustedScale = 1
@@ -103,47 +106,52 @@
 </script>
 
 <style lang="scss" scoped>
-.home-container {
-  height: 100%;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+  .home-container {
+    height: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    .home-header, .tablet-container {
+      flex-grow: 1;
+    }
+    .home-header {
+      justify-content: center;
+    }
+  }
 
-.title {
-  text-align: center;
-  align-self: center;
-  padding-top: .75em;
-  font-size: 2em;
-}
-
-.tablet-container {
-  padding: 0 2em;
-  flex-wrap: nowrap;
-  width: 100%;
-  height: 60%;
-
-  & > .tablet-box {
+  .title {
+    text-align: center;
     align-self: center;
-    padding: 0 .15em;
+    font-size: 2em;
   }
 
-  img {
+  .tablet-container {
+    padding: 0 2em;
+    flex-wrap: nowrap;
     width: 100%;
-    z-index: 3;
-  }
-}
-.tablet-1 img {
-  /*padding: 0 1.5em;*/
-  transform: scale(.8);
-}
-.tablet-2 img {
- transform: scale(1.1);
-}
-.tablet-3 img{
-  /*padding: 0 1.5em;*/
-  transform: scale(.8);
+    height: 60%;
 
-}
+    & > .tablet-box {
+      align-self: center;
+      padding: 0 .15em;
+    }
+
+    img {
+      width: 100%;
+      z-index: 3;
+    }
+  }
+  .tablet-1 img {
+    /*padding: 0 1.5em;*/
+    transform: scale(.9);
+  }
+  .tablet-2 img {
+   transform: scale(.85);
+  }
+  .tablet-3 img{
+    /*padding: 0 1.5em;*/
+    transform: scale(.9);
+
+  }
 
   .title, .home-footer-container {
     opacity: 0;

@@ -2,12 +2,8 @@
   <div class="home-footer-container flex color-orange">
     <div class="cta flex action">
       <img class="icon" src="../../assets/touch_explore.png">
-      <p class="description color-white">Touch an Object to Learn More</p>
+      <p class="description color-white sans-serif">Touch an Object to Learn More</p>
     </div>
-    <!--<div class="audio flex action">-->
-      <!--<img class="icon" src="../../assets/play_btn.svg">-->
-      <!--<p class="description">Hear an Orphic tablet inscription, recited in ancient Greek.</p>-->
-    <!--</div>-->
   </div>
 </template>
 
@@ -27,6 +23,7 @@
 <style lang="scss" scoped>
 .home-footer-container {
   width: 100%;
+  align-items: center;
   & > div {
     width: 100%;
     flex-grow: 1;
@@ -66,7 +63,7 @@ img {
   height: auto;
   max-height: 90px;
   vertical-align: middle;
-  line-height: 90px;
+  line-height: 100px;
 }
 
 </style>
