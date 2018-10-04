@@ -14,7 +14,7 @@
       </div>
       <div class="option flex" v-else>
         <img src="@/assets/i_shell.svg" alt="Label Chat" class="info-btn smaller">
-        <h6>Label Chat</h6>
+        <h6>About Tablet</h6>
       </div>
     </router-link>
   </div>
@@ -40,7 +40,7 @@
     .option {
       flex-wrap: wrap;
       justify-content: center;
-      width: 5.2em;
+      width: 5.5em;
       margin: .5em;
 
       img {

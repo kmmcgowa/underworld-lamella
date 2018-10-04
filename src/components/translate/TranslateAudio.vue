@@ -2,7 +2,7 @@
   <section class="audio-container flex">
     <img src="@/assets/play_btn.svg" alt="Play Audio Snippet" class="audio-btn" @click="toggleAudio" v-if="playIcon">
     <img src="@/assets/stop_btn.svg" alt="Stop Audio Snippet" class="audio-btn" @click="toggleAudio" v-else>
-    <p class="audio-cta">Hear this Orphic tablet inscription,<br>recited in ancient Greek.</p>
+    <p class="audio-cta">Hear this Orphic tablet inscription<br>recited in ancient Greek.</p>
     <audio ref="audio" class="main-audio">
       <source :src="mp3" type="audio/mp3">
     </audio>
@@ -54,7 +54,10 @@
 
 <style lang="scss" scoped>
   .audio-container {
-    margin-top: 3em;
+    margin: {
+      top: 3em;
+      right: 3em;
+    }
     padding: .5em 1em;
     align-items: center;
     border-top: 2px solid $color-grey;

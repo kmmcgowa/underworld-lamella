@@ -40,12 +40,12 @@
     color: $color-white;
     margin: 0 1em;
     padding-right: .5em;
-    max-height: 814px;
-    mask-image: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,1) 2%, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%);
-    overflow: scroll;
+    height: 814px;
+    /*mask-image: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,1) 2%, rgba(0,0,0,1) 95%, rgba(0,0,0,0) 100%);*/
+    overflow: hidden;
     .grad-mask {
       // padding: 10% 0 45%;
-      padding: 10% 0 10%;
+      padding: 10% 0 0;
     }
   }
   #tombstone {

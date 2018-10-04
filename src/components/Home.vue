@@ -1,5 +1,5 @@
 <template>
-  <div class="home-container flex">
+  <div class="home-container">
     <header class="flex home-header">
       <h1 class="sans-serif color-white title"
           :class="{ visible: animationOver, show: (previousObjCheck === null) }">Passports to a Better Afterlife</h1>
@@ -106,29 +106,28 @@
 </script>
 
 <style lang="scss" scoped>
+
+  /**
+   * TODO: refactor to grid
+   */
+
   .home-container {
     height: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
-    .home-header, .tablet-container {
-      flex-grow: 1;
-    }
-    .home-header {
-      justify-content: center;
-    }
+    display: grid;
+    //grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+
+    grid-template-rows: 150px auto 150px;
   }
 
-  .title {
-    text-align: center;
-    align-self: center;
-    font-size: 2em;
+  .home-header {
+    justify-content: center;
   }
 
   .tablet-container {
     padding: 0 2em;
     flex-wrap: nowrap;
     width: 100%;
-    height: 60%;
 
     & > .tablet-box {
       align-self: center;
@@ -150,7 +149,6 @@
   .tablet-3 img{
     /*padding: 0 1.5em;*/
     transform: scale(.9);
-
   }
 
   .title, .home-footer-container {

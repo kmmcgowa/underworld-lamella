@@ -2,7 +2,10 @@
   <div id="object-screen" v-if="configReady">
     <Navigation/>
     <div class="artwork">
-      <img :src="objectArtwork" class="primary-img" ref="image">
+      <img class="primary-img" ref="image"
+        :src="objectArtwork"
+        v-hammer:tap="triggerZoom"
+        v-hammer:pinch="triggerZoom">
     </div>
     <main class="content" :class="{visible: animationOver}">
       <!-- Info box holds and of the right hand content including the label, translation, and audio apparatus -->
@@ -102,11 +105,18 @@
         }
 
         this.$store.dispatch('setNewCurrentObject', id)
+      },
+
+      triggerZoom () {
+        this.$router.push({ name: 'zoom', params: { obj_id: this.$route.params.obj_id } })
       }
     },
 
     beforeRouteLeave (to, _from, next) {
-      if (to.name !== 'home') { next() }
+      if (to.name !== 'home') {
+        next()
+        return
+      }
       const image = document.querySelector('.primary-img')
       const bounds = image.getBoundingClientRect()
       this.$store.commit('setCoordinates', bounds)
