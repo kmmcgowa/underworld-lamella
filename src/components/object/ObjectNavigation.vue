@@ -6,7 +6,6 @@
         <h6>Zoom</h6>
       </div>
     </router-link>
-    <!--TODO: toggle between translate and label-->
     <router-link :to="linkToggle" class="nav-link">
       <div class="option flex" v-if="(this.$route.name !== 'translation')">
         <img src="@/assets/translate.svg" alt="Translate">

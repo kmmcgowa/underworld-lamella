@@ -167,5 +167,7 @@
     margin-top: 3em;
     z-index: 3;
     opacity: 1 !important;
+    padding: 0 1em;
+    cursor: pointer;
   }
 </style>

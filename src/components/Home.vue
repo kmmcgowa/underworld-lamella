@@ -106,18 +106,11 @@
 </script>
 
 <style lang="scss" scoped>
-
-  /**
-   * TODO: refactor to grid
-   */
-
   .home-container {
     height: 100%;
     display: grid;
-    //grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     align-items: center;
-
-    grid-template-rows: 150px auto 150px;
   }
 
   .home-header {
