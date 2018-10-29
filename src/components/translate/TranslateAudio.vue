@@ -44,6 +44,7 @@
 
         if (!this.player.playing) {
           this.player.play()
+          this.$ga.event('Underworld Audio', 'Play')
           return
         }
         this.player.stop()

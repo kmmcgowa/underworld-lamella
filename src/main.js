@@ -11,7 +11,7 @@ import 'web-animations-js'
 Vue.use(VueAxios, axios)
 Vue.use(VueAnalytics, {
   // TODO: get ID from env
-  id: 'UA-110656288-3',
+  id: 'UA-8087223-32',
   router
 })
 Vue.use(VueHammer)
