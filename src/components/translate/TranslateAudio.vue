@@ -32,6 +32,7 @@
       this.player = new Plyr(el, {
         controls: []
       })
+      this.player.on('ended', this.toggleIcon)
     },
 
     beforeDestroy () {
@@ -40,7 +41,7 @@
 
     methods: {
       toggleAudio () {
-        this.playIcon = !this.playIcon
+        this.toggleIcon()
 
         if (!this.player.playing) {
           this.player.play()
@@ -48,6 +49,10 @@
           return
         }
         this.player.stop()
+      },
+
+      toggleIcon () {
+        this.playIcon = !this.playIcon
       }
     }
   }
