@@ -4,6 +4,7 @@ This project was built for the *Underworld: Imagining the Afterlife* exhibition 
 
 ---
 Named after the mythical poet Orpheus, Orphic tablets are inscriptions written on thin sheets of gold that were buried with the dead. The ancient Greeks believed that one means to a good afterlife was through initiation into a mystery cult. An Orphic tablet vouched for an initiate’s privileged status upon death, and its inscription was meant to be recited for entry into the underworld. Its text might reference landmarks along the journey, such as a spring, a cypress tree, or the Lake of Memory.
+
 ![Orphic Lamella](public/assets/gm_new.png)
 
 To learn more about orphic tablets visit [getty.edu](http://www.getty.edu/art/collection/objects/7194/unknown-maker-lamella-orphica-greek-second-half-of-4th-century-bc/).
