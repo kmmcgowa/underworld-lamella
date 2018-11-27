@@ -62,7 +62,13 @@
   .audio-container {
     margin: {
       top: 3em;
-      right: 3em;
+      right: 1em;
+    }
+    @media #{$tablet-up} {
+      margin: {
+        top: 3em;
+        right: 3em;
+      }
     }
     padding: .5em 1em;
     align-items: center;
