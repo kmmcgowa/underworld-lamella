@@ -131,12 +131,21 @@
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 60px 1fr 150px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60px auto auto 150px;
   grid-template-areas:
-          "nav nav"
-          "art info"
-          "options info";
+          'nav'
+          'art'
+          'info'
+          'options';
+  @media #{$tablet-up} {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 60px 1fr 150px;
+    grid-template-areas:
+            "nav nav"
+            "art info"
+            "options info";
+  }
 }
 #main-navigation {
   grid-area: nav;

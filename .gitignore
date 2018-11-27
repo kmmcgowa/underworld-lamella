@@ -1,7 +1,6 @@
 .DS_Store
 node_modules
-/dist
-/dist_heart
+/dist*
 raw_assets
 public/assets/zoom_tiles/**/*.jpg
 

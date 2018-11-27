@@ -39,7 +39,10 @@
 <style lang="scss" scoped>
 #translate {
   margin-left: 1em;
-  font-size: .83em;
+  font-size: 1.2em;
+  @media #{$tablet-up} {
+    font-size: .83em;
+  }
 }
 #main-translation {
   padding: 10% 0 1em;

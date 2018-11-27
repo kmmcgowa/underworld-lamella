@@ -47,9 +47,12 @@ $font-title-treatment: 'title', $font-sans-serif;
 body {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  // overflow: hidden;
   font-family: $font-serif;
-  font-size: 30px;
+  font-size: 20px;
+  @media #{$tablet-up} {
+    font-size: 30px;
+  }
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -82,3 +85,4 @@ body {
 .flex {
   display: flex;
 }
+

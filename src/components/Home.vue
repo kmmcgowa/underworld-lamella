@@ -1,8 +1,11 @@
 <template>
-  <div class="home-container">
-    <header class="flex home-header">
+  <div class="home-container" :class="{ web: webVersion }">
+    <header class="home-header">
       <h1 class="sans-serif color-white title"
           :class="{ visible: animationOver, show: (previousObjCheck === null) }">Passports to a Better Afterlife</h1>
+      <div>
+        <p>Named after the mythical poet Orpheus, Orphic tablets are inscriptions written on thin sheets of gold that were buried with the dead. The ancient Greeks believed that one means to a good afterlife was through initiation into a mystery cult. An Orphic tablet vouched for an initiate’s privileged status upon death, and its inscription was meant to be recited for entry into the underworld. Its text might reference landmarks along the journey, such as a spring, a cypress tree, or the Lake of Memory.</p>
+      </div>
     </header>
     <main class="flex tablet-container">
       <div v-for="obj in objects"
@@ -15,7 +18,7 @@
         </router-link>
       </div>
     </main>
-    <HomeFooter class="home-footer" :class="{ visible: animationOver, show: (previousObjCheck === null) }"/>
+    <HomeFooter class="home-footer" :class="{ visible: animationOver, show: (previousObjCheck === null) }" v-if="!webVersion"/>
   </div>
 </template>
 
@@ -32,6 +35,9 @@
     },
 
     computed: {
+      webVersion () {
+        return (process.env.VUE_APP_WEB_VERSION === 'true')
+      },
       ...mapGetters({
         objects: 'allObjects',
         animationCoords: 'animationCoords',
@@ -60,13 +66,13 @@
       switch (id) {
       case 0:
       case 2:
-        adjustedScale = 0.9
+        adjustedScale = (this.webVersion ? 0.7 : 0.9)
         break
       case 1:
-        adjustedScale = 0.85
+        adjustedScale = (this.webVersion ? 0.9 : 0.85)
         break
       default:
-        adjustedScale = 1
+        adjustedScale = (this.webVersion ? 0.7 : 1)
       }
 
       let ani = image.animate([{
@@ -115,6 +121,7 @@
 
   .home-header {
     justify-content: center;
+    margin-right: 1em;
   }
 
   .tablet-container {
@@ -165,6 +172,52 @@
     }
     &.show {
       opacity: 1 !important;
+    }
+  }
+</style>
+
+<style lang="scss" scoped>
+  .web {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-row-gap: 2em;
+    grid-template-areas:
+            'info'
+            'tablets';
+
+    @media #{$tablet-up} {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      grid-template-areas: 'tablets info';
+      align-items: center;
+    }
+
+    .home-header {
+      grid-area: info;
+      margin: 1em 1em 0;
+    }
+
+    .tablet-container {
+      grid-area: tablets;
+      flex-direction: column;
+
+      img {
+        width: 100%;
+        max-width: 500px;
+        z-index: 3;
+      }
+    }
+
+    .tablet-1 img {
+      /*padding: 0 1.5em;*/
+      transform: scale(.7);
+    }
+    .tablet-2 img {
+      transform: scale(.9);
+    }
+    .tablet-3 img{
+      /*padding: 0 1.5em;*/
+      transform: scale(.7);
     }
   }
 </style>
