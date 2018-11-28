@@ -49,9 +49,6 @@
 
     }
 
-
-    /* Copyright/Legal -------------------- */
-
     #copyright {
       font-size: 11px;
       font-weight: 400;

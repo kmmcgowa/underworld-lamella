@@ -30,7 +30,7 @@
 #app {
   width: 100%;
   @media #{$tablet-up} {
-    height: 100%;
+    min-height: 100%;
   }
 }
 
