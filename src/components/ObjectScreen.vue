@@ -129,7 +129,7 @@
 #object-screen {
   padding: 0 1em;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 60px auto auto 150px;
