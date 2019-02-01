@@ -4,7 +4,7 @@
       <h1 class="sans-serif color-white title"
           :class="{ visible: animationOver, show: (previousObjCheck === null) }">Passports to a Better Afterlife</h1>
       <div class="home-content" :class="{ visible: animationOver, show: (previousObjCheck === null) }">
-        <p>Named after the mythical poet Orpheus, Orphic tablets are inscriptions written on thin sheets of gold that were buried with the dead. The ancient Greeks believed that one means to a good afterlife was through initiation into a mystery cult. An Orphic tablet vouched for an initiate’s privileged status upon death, and its inscription was meant to be recited for entry into the underworld. Its text might reference landmarks along the journey, such as a spring, a cypress tree, or the Lake of Memory.</p>
+        <p>Named after the mythical poet Orpheus, Orphic tablets are inscriptions written on thin sheets of gold that were buried with the dead. Some ancient Greeks believed that one means to a good afterlife was through initiation into a mystery cult. An Orphic tablet vouched for an initiate’s privileged status upon death, and its inscription provided guidance for entry into the Underworld. The text might reference landmarks along the journey, such as a spring, a cypress tree, or the Lake of Memory.</p>
       </div>
     </header>
     <main class="flex tablet-container">
